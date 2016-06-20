@@ -9,12 +9,21 @@
 /* Begin PBXBuildFile section */
 		E4B4363E1D177B5000459055 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B4363D1D177B5000459055 /* main.m */; };
 		E4B436411D177B5000459055 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B436401D177B5000459055 /* AppDelegate.m */; };
-		E4B436441D177B5000459055 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B436431D177B5000459055 /* ViewController.m */; };
-		E4B436471D177B5000459055 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4B436451D177B5000459055 /* Main.storyboard */; };
 		E4B436491D177B5000459055 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4B436481D177B5000459055 /* Assets.xcassets */; };
 		E4B4364C1D177B5000459055 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4B4364A1D177B5000459055 /* LaunchScreen.storyboard */; };
 		E4B436571D177B5000459055 /* YueshouAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B436561D177B5000459055 /* YueshouAppTests.m */; };
 		E4B436621D177B5000459055 /* YueshouAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B436611D177B5000459055 /* YueshouAppUITests.m */; };
+		E4B4368A1D177EC100459055 /* YSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B436891D177EC100459055 /* YSHomeViewController.m */; };
+		E4B4368D1D177F3D00459055 /* YSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B4368C1D177F3D00459055 /* YSTabBarController.m */; };
+		E4B436901D17802200459055 /* YSCrowdfundingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B4368F1D17802200459055 /* YSCrowdfundingViewController.m */; };
+		E4B4369A1D17808900459055 /* YSServeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B436971D17808900459055 /* YSServeViewController.m */; };
+		E4B4369D1D17851900459055 /* YSProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B4369C1D17851900459055 /* YSProfileViewController.m */; };
+		E4B436A01D178A4500459055 /* YSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B4369F1D178A4500459055 /* YSNavigationController.m */; };
+		E4B436A51D178B3800459055 /* UIBarButtonItem+YSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B436A41D178B3800459055 /* UIBarButtonItem+YSExtension.m */; };
+		E4B436A81D178B6500459055 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B436A71D178B6500459055 /* UIView+Extension.m */; };
+		E4B436AF1D178CFC00459055 /* CollectionImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B436AC1D178CFC00459055 /* CollectionImageCell.m */; };
+		E4B436B01D178CFC00459055 /* CollectionImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B436AE1D178CFC00459055 /* CollectionImageView.m */; };
+		E4B436B31D178D4F00459055 /* YSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B436B21D178D4F00459055 /* YSWebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +46,8 @@
 /* Begin PBXFileReference section */
 		E4B436391D177B5000459055 /* YueshouApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YueshouApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B4363D1D177B5000459055 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E4B4363F1D177B5000459055 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E4B436401D177B5000459055 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E4B436421D177B5000459055 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E4B436431D177B5000459055 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E4B436461D177B5000459055 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E4B4363F1D177B5000459055 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../../AppDelegate.h; sourceTree = "<group>"; };
+		E4B436401D177B5000459055 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../../../AppDelegate.m; sourceTree = "<group>"; };
 		E4B436481D177B5000459055 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4B4364B1D177B5000459055 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4B4364D1D177B5000459055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +57,29 @@
 		E4B4365D1D177B5000459055 /* YueshouAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YueshouAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B436611D177B5000459055 /* YueshouAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YueshouAppUITests.m; sourceTree = "<group>"; };
 		E4B436631D177B5000459055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4B436881D177EC100459055 /* YSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSHomeViewController.h; sourceTree = "<group>"; };
+		E4B436891D177EC100459055 /* YSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSHomeViewController.m; sourceTree = "<group>"; };
+		E4B4368B1D177F3D00459055 /* YSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSTabBarController.h; sourceTree = "<group>"; };
+		E4B4368C1D177F3D00459055 /* YSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSTabBarController.m; sourceTree = "<group>"; };
+		E4B4368E1D17802200459055 /* YSCrowdfundingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSCrowdfundingViewController.h; sourceTree = "<group>"; };
+		E4B4368F1D17802200459055 /* YSCrowdfundingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSCrowdfundingViewController.m; sourceTree = "<group>"; };
+		E4B436961D17808900459055 /* YSServeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSServeViewController.h; sourceTree = "<group>"; };
+		E4B436971D17808900459055 /* YSServeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSServeViewController.m; sourceTree = "<group>"; };
+		E4B4369B1D17851900459055 /* YSProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSProfileViewController.h; sourceTree = "<group>"; };
+		E4B4369C1D17851900459055 /* YSProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSProfileViewController.m; sourceTree = "<group>"; };
+		E4B4369E1D178A4500459055 /* YSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSNavigationController.h; sourceTree = "<group>"; };
+		E4B4369F1D178A4500459055 /* YSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSNavigationController.m; sourceTree = "<group>"; };
+		E4B436A31D178B3800459055 /* UIBarButtonItem+YSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+YSExtension.h"; sourceTree = "<group>"; };
+		E4B436A41D178B3800459055 /* UIBarButtonItem+YSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+YSExtension.m"; sourceTree = "<group>"; };
+		E4B436A61D178B6500459055 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		E4B436A71D178B6500459055 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		E4B436A91D178B8600459055 /* YSPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSPrefixHeader.pch; sourceTree = "<group>"; };
+		E4B436AB1D178CFC00459055 /* CollectionImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionImageCell.h; sourceTree = "<group>"; };
+		E4B436AC1D178CFC00459055 /* CollectionImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionImageCell.m; sourceTree = "<group>"; };
+		E4B436AD1D178CFC00459055 /* CollectionImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionImageView.h; sourceTree = "<group>"; };
+		E4B436AE1D178CFC00459055 /* CollectionImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionImageView.m; sourceTree = "<group>"; };
+		E4B436B11D178D4F00459055 /* YSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSWebViewController.h; sourceTree = "<group>"; };
+		E4B436B21D178D4F00459055 /* YSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +130,7 @@
 		E4B4363B1D177B5000459055 /* YueshouApp */ = {
 			isa = PBXGroup;
 			children = (
-				E4B4363F1D177B5000459055 /* AppDelegate.h */,
-				E4B436401D177B5000459055 /* AppDelegate.m */,
-				E4B436421D177B5000459055 /* ViewController.h */,
-				E4B436431D177B5000459055 /* ViewController.m */,
-				E4B436451D177B5000459055 /* Main.storyboard */,
-				E4B436481D177B5000459055 /* Assets.xcassets */,
-				E4B4364A1D177B5000459055 /* LaunchScreen.storyboard */,
-				E4B4364D1D177B5000459055 /* Info.plist */,
+				E4B4366F1D177D0400459055 /* Classes */,
 				E4B4363C1D177B5000459055 /* Supporting Files */,
 			);
 			path = YueshouApp;
@@ -117,7 +139,11 @@
 		E4B4363C1D177B5000459055 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E4B436481D177B5000459055 /* Assets.xcassets */,
+				E4B4364A1D177B5000459055 /* LaunchScreen.storyboard */,
+				E4B4364D1D177B5000459055 /* Info.plist */,
 				E4B4363D1D177B5000459055 /* main.m */,
+				E4B436A91D178B8600459055 /* YSPrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -138,6 +164,238 @@
 				E4B436631D177B5000459055 /* Info.plist */,
 			);
 			path = YueshouAppUITests;
+			sourceTree = "<group>";
+		};
+		E4B4366F1D177D0400459055 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E4B436791D177D0400459055 /* Main */,
+				E4B436751D177D0400459055 /* Home(首页) */,
+				E4B436701D177D0400459055 /* Crowdfunding(众筹) */,
+				E4B436941D17808900459055 /* Serve(服务) */,
+				E4B436801D177D0400459055 /* Profile(我的) */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E4B436701D177D0400459055 /* Crowdfunding(众筹) */ = {
+			isa = PBXGroup;
+			children = (
+				E4B436711D177D0400459055 /* Controller */,
+				E4B436721D177D0400459055 /* Model */,
+				E4B436731D177D0400459055 /* Tool */,
+				E4B436741D177D0400459055 /* View */,
+			);
+			path = "Crowdfunding(众筹)";
+			sourceTree = "<group>";
+		};
+		E4B436711D177D0400459055 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E4B4368E1D17802200459055 /* YSCrowdfundingViewController.h */,
+				E4B4368F1D17802200459055 /* YSCrowdfundingViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E4B436721D177D0400459055 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E4B436731D177D0400459055 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		E4B436741D177D0400459055 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E4B436751D177D0400459055 /* Home(首页) */ = {
+			isa = PBXGroup;
+			children = (
+				E4B436761D177D0400459055 /* Controller */,
+				E4B436771D177D0400459055 /* Model */,
+				E4B436781D177D0400459055 /* View */,
+			);
+			path = "Home(首页)";
+			sourceTree = "<group>";
+		};
+		E4B436761D177D0400459055 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E4B436881D177EC100459055 /* YSHomeViewController.h */,
+				E4B436891D177EC100459055 /* YSHomeViewController.m */,
+				E4B436B11D178D4F00459055 /* YSWebViewController.h */,
+				E4B436B21D178D4F00459055 /* YSWebViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E4B436771D177D0400459055 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E4B436781D177D0400459055 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E4B436791D177D0400459055 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E4B4367A1D177D0400459055 /* Category */,
+				E4B4367B1D177D0400459055 /* Controller */,
+				E4B4367C1D177D0400459055 /* Model */,
+				E4B4367E1D177D0400459055 /* Tool */,
+				E4B4367F1D177D0400459055 /* View */,
+				E4B4367D1D177D0400459055 /* Other */,
+			);
+			name = Main;
+			path = "Main(主要)";
+			sourceTree = "<group>";
+		};
+		E4B4367A1D177D0400459055 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				E4B436A31D178B3800459055 /* UIBarButtonItem+YSExtension.h */,
+				E4B436A41D178B3800459055 /* UIBarButtonItem+YSExtension.m */,
+				E4B436A61D178B6500459055 /* UIView+Extension.h */,
+				E4B436A71D178B6500459055 /* UIView+Extension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		E4B4367B1D177D0400459055 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E4B4368B1D177F3D00459055 /* YSTabBarController.h */,
+				E4B4368C1D177F3D00459055 /* YSTabBarController.m */,
+				E4B4369E1D178A4500459055 /* YSNavigationController.h */,
+				E4B4369F1D178A4500459055 /* YSNavigationController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E4B4367C1D177D0400459055 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E4B4367D1D177D0400459055 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				E4B4363F1D177B5000459055 /* AppDelegate.h */,
+				E4B436401D177B5000459055 /* AppDelegate.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		E4B4367E1D177D0400459055 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				E4B436AA1D178CFC00459055 /* InfinitiCollectionView */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		E4B4367F1D177D0400459055 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E4B436801D177D0400459055 /* Profile(我的) */ = {
+			isa = PBXGroup;
+			children = (
+				E4B436811D177D0400459055 /* Controller */,
+				E4B436821D177D0400459055 /* Model */,
+				E4B436831D177D0400459055 /* View */,
+			);
+			path = "Profile(我的)";
+			sourceTree = "<group>";
+		};
+		E4B436811D177D0400459055 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E4B4369B1D17851900459055 /* YSProfileViewController.h */,
+				E4B4369C1D17851900459055 /* YSProfileViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E4B436821D177D0400459055 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E4B436831D177D0400459055 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E4B436941D17808900459055 /* Serve(服务) */ = {
+			isa = PBXGroup;
+			children = (
+				E4B436951D17808900459055 /* Controller */,
+				E4B436981D17808900459055 /* Model */,
+				E4B436991D17808900459055 /* View */,
+			);
+			path = "Serve(服务)";
+			sourceTree = "<group>";
+		};
+		E4B436951D17808900459055 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E4B436961D17808900459055 /* YSServeViewController.h */,
+				E4B436971D17808900459055 /* YSServeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E4B436981D17808900459055 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E4B436991D17808900459055 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E4B436AA1D178CFC00459055 /* InfinitiCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				E4B436AB1D178CFC00459055 /* CollectionImageCell.h */,
+				E4B436AC1D178CFC00459055 /* CollectionImageCell.m */,
+				E4B436AD1D178CFC00459055 /* CollectionImageView.h */,
+				E4B436AE1D178CFC00459055 /* CollectionImageView.m */,
+			);
+			path = InfinitiCollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +460,7 @@
 		E4B436311D177B5000459055 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = YS;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = xiaoke;
 				TargetAttributes = {
@@ -248,7 +507,6 @@
 			files = (
 				E4B4364C1D177B5000459055 /* LaunchScreen.storyboard in Resources */,
 				E4B436491D177B5000459055 /* Assets.xcassets in Resources */,
-				E4B436471D177B5000459055 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,9 +531,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4B436441D177B5000459055 /* ViewController.m in Sources */,
+				E4B436A81D178B6500459055 /* UIView+Extension.m in Sources */,
+				E4B4368A1D177EC100459055 /* YSHomeViewController.m in Sources */,
+				E4B436AF1D178CFC00459055 /* CollectionImageCell.m in Sources */,
+				E4B436B31D178D4F00459055 /* YSWebViewController.m in Sources */,
 				E4B436411D177B5000459055 /* AppDelegate.m in Sources */,
 				E4B4363E1D177B5000459055 /* main.m in Sources */,
+				E4B436A51D178B3800459055 /* UIBarButtonItem+YSExtension.m in Sources */,
+				E4B436B01D178CFC00459055 /* CollectionImageView.m in Sources */,
+				E4B436A01D178A4500459055 /* YSNavigationController.m in Sources */,
+				E4B436901D17802200459055 /* YSCrowdfundingViewController.m in Sources */,
+				E4B4369A1D17808900459055 /* YSServeViewController.m in Sources */,
+				E4B4368D1D177F3D00459055 /* YSTabBarController.m in Sources */,
+				E4B4369D1D17851900459055 /* YSProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,14 +579,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E4B436451D177B5000459055 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E4B436461D177B5000459055 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E4B4364A1D177B5000459055 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -416,6 +676,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = /Users/ehongzhen/Desktop/YueshouApp/YueshouApp/YSPrefixHeader.pch;
 				INFOPLIST_FILE = YueshouApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoke.YueshouApp;
@@ -427,6 +688,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = /Users/ehongzhen/Desktop/YueshouApp/YueshouApp/YSPrefixHeader.pch;
 				INFOPLIST_FILE = YueshouApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaoke.YueshouApp;

@@ -1,0 +1,39 @@
+//
+//  YSPrefixHeader.pch
+//  YueshouApp
+//
+//  Created by 鄂鸿桢 on 16/6/20.
+//  Copyright © 2016年 xiaoke. All rights reserved.
+//
+
+#ifndef YSPrefixHeader_pch
+#define YSPrefixHeader_pch
+
+#ifdef __OBJC__
+
+#import "YSTabBarController.h"
+#import "YSNavigationController.h"
+#import "UIView+Extension.h"
+#import "UIBarButtonItem+YSExtension.h"
+
+// 颜色
+#define YSColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+//随机色
+#define YSRandomColor [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0]
+
+//全局背景色
+#define YSGlobalBackground YSColor(242, 242, 242)
+
+//YSLog定义
+#ifdef DEBUG // 调试状态, 打开LOG功能
+#define YSLog(...) NSLog(__VA_ARGS__)
+#else // 发布状态, 关闭LOG功能
+#define YSLog(...)
+#endif
+
+
+#endif
+
+
+#endif /* YSPrefixHeader_pch */
