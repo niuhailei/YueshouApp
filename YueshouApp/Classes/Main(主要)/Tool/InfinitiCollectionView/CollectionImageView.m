@@ -17,7 +17,7 @@ static NSInteger const SectionCount = 50;
 @property (nonatomic, copy)selectImageBlock block;
 @property (nonatomic, strong)NSArray *imageArray;
 @property (nonatomic, strong)UICollectionView *collectionView;
-//@property (nonatomic, strong)UIPageControl *pageCtrl;
+@property (nonatomic, strong)UIPageControl *pageCtrl;
 @property (nonatomic, strong)NSTimer *timer;
 @end
 @implementation CollectionImageView
@@ -30,7 +30,7 @@ static NSInteger const SectionCount = 50;
         self.imageArray = imageArray;
         [self addSubview:self.collectionView];
         [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:SectionCount/2] atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
-//        [self addSubview:self.pageCtrl];
+        [self addSubview:self.pageCtrl];
         [self addTimer];
     }
     return self;
@@ -69,7 +69,7 @@ static NSInteger const SectionCount = 50;
 {
     [self addTimer];
     //这个位置是你拖动结束后调用一次
-//    self.pageCtrl.currentPage = (NSInteger)(scrollView.contentOffset.x / scrollView.frame.size.width + 0.5) % self.imageArray.count;
+    self.pageCtrl.currentPage = (NSInteger)(scrollView.contentOffset.x / scrollView.frame.size.width + 0.5) % self.imageArray.count;
 }
 /* 
  *这个方法只要scrollView一滑动就会调用很多次,虽然没有创建东西，但是感觉上不太爽
@@ -80,7 +80,7 @@ static NSInteger const SectionCount = 50;
  */
 -(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
 {//这个位置是定时器让它滑动结束后调用一次
-//    self.pageCtrl.currentPage = (NSInteger)(scrollView.contentOffset.x / scrollView.frame.size.width + 0.5) % self.imageArray.count;
+    self.pageCtrl.currentPage = (NSInteger)(scrollView.contentOffset.x / scrollView.frame.size.width + 0.5) % self.imageArray.count;
 }
 #pragma mark - private Method
 - (void)addTimer
@@ -138,16 +138,16 @@ static NSInteger const SectionCount = 50;
     return _collectionView;
 }
 
-//- (UIPageControl *)pageCtrl
-//{
-//    if (!_pageCtrl) {
-//        _pageCtrl = [[UIPageControl alloc]initWithFrame:CGRectMake((SELF_WIDTH - 100) * 0.5f, SELF_HEIGHT - 40, 100, 20)];
-//        _pageCtrl.numberOfPages = [self.imageArray count];
-//        _pageCtrl.currentPage = 0;
-//        _pageCtrl.currentPageIndicatorTintColor = [UIColor redColor];
-//        _pageCtrl.pageIndicatorTintColor = [UIColor yellowColor];
-//    }
-//    return _pageCtrl;
-//}
+- (UIPageControl *)pageCtrl
+{
+    if (!_pageCtrl) {
+        _pageCtrl = [[UIPageControl alloc]initWithFrame:CGRectMake((SELF_WIDTH - 100) * 0.5f, SELF_HEIGHT - 20, 100, 20)];
+        _pageCtrl.numberOfPages = [self.imageArray count];
+        _pageCtrl.currentPage = 0;
+        _pageCtrl.currentPageIndicatorTintColor = [UIColor blueColor];
+        _pageCtrl.pageIndicatorTintColor = [UIColor lightGrayColor];
+    }
+    return _pageCtrl;
+}
 
 @end

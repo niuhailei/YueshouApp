@@ -24,6 +24,7 @@
 		E4B436AF1D178CFC00459055 /* CollectionImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B436AC1D178CFC00459055 /* CollectionImageCell.m */; };
 		E4B436B01D178CFC00459055 /* CollectionImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B436AE1D178CFC00459055 /* CollectionImageView.m */; };
 		E4B436B31D178D4F00459055 /* YSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B436B21D178D4F00459055 /* YSWebViewController.m */; };
+		E4B436BB1D17B22000459055 /* YSBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B436BA1D17B22000459055 /* YSBtnView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,8 @@
 		E4B436AE1D178CFC00459055 /* CollectionImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionImageView.m; sourceTree = "<group>"; };
 		E4B436B11D178D4F00459055 /* YSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSWebViewController.h; sourceTree = "<group>"; };
 		E4B436B21D178D4F00459055 /* YSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSWebViewController.m; sourceTree = "<group>"; };
+		E4B436B91D17B22000459055 /* YSBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSBtnView.h; sourceTree = "<group>"; };
+		E4B436BA1D17B22000459055 /* YSBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSBtnView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +253,8 @@
 		E4B436781D177D0400459055 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E4B436B91D17B22000459055 /* YSBtnView.h */,
+				E4B436BA1D17B22000459055 /* YSBtnView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -539,6 +544,7 @@
 				E4B4363E1D177B5000459055 /* main.m in Sources */,
 				E4B436A51D178B3800459055 /* UIBarButtonItem+YSExtension.m in Sources */,
 				E4B436B01D178CFC00459055 /* CollectionImageView.m in Sources */,
+				E4B436BB1D17B22000459055 /* YSBtnView.m in Sources */,
 				E4B436A01D178A4500459055 /* YSNavigationController.m in Sources */,
 				E4B436901D17802200459055 /* YSCrowdfundingViewController.m in Sources */,
 				E4B4369A1D17808900459055 /* YSServeViewController.m in Sources */,
@@ -761,6 +767,7 @@
 				E4B436681D177B5000459055 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E4B436691D177B5000459055 /* Build configuration list for PBXNativeTarget "YueshouAppTests" */ = {
 			isa = XCConfigurationList;
@@ -769,6 +776,7 @@
 				E4B4366B1D177B5000459055 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E4B4366C1D177B5000459055 /* Build configuration list for PBXNativeTarget "YueshouAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -777,6 +785,7 @@
 				E4B4366E1D177B5000459055 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

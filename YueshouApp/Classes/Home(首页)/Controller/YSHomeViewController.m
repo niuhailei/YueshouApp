@@ -9,6 +9,7 @@
 #import "YSHomeViewController.h"
 #import "CollectionImageView.h"
 #import "YSWebViewController.h"
+#import "YSBtnView.h"
 #import <WebKit/WebKit.h>
 
 #define ScreenSize      [UIScreen mainScreen].bounds.size
@@ -20,6 +21,7 @@
 @property (nonatomic, assign) CGFloat btnY;
 @property (nonatomic, assign) CGFloat scrollY;
 @property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong) YSBtnView *btnView;
 //定时器
 @property (weak,nonatomic)NSTimer *timer;
 
@@ -30,44 +32,44 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    YSBtnView *btnView = [[YSBtnView alloc] initWithFrame:CGRectMake(0, 64, self.view.width, 180)];
+    btnView.backgroundColor = YSRandomColor;
+    [self.view addSubview:btnView];
+    self.btnView = btnView;
     self.navigationItem.title = @"约手网";
-    self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
-    self.scrollView.panGestureRecognizer.delaysTouchesBegan = YES;
-    [self.view addSubview:self.scrollView];
-//    self.scrollView.scrollEnabled = NO;
-    self.view.backgroundColor = [UIColor lightGrayColor];
-    [self setUpView];
+    [self setupScrollView];
     [self setUpTopButton];
+    [self setUpView];
     [self setupAdView];
     [self setUpBottomButton];
     self.scrollView.contentSize = CGSizeMake(self.view.bounds.size.width, self.scrollY + 64);
 }
-#pragma mark -- 配置视图
--(void)setUpView
+
+- (void)setupScrollView
 {
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    NSArray *images = @[@"ad1",@"ad1",@"ad1",@"ad1",@"ad1"];
-    CollectionImageView *infiniteScrollView = [[CollectionImageView alloc]initWithFrame:CGRectMake(0, 64, ScreenSize.width, 180) imageArray:images selectImageBlock:^(NSInteger index) {
-        NSLog(@"点击的是第%ld个",(long)index);
-    }];
-    [self.scrollView addSubview:infiniteScrollView];
-    self.infiniteScrollView = infiniteScrollView;
+    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, self.btnView.height + 64, self.view.width, self.view.height - self.btnView.height - 50)];
+    self.scrollView.contentOffset = CGPointMake(0, 64);
+    self.scrollView.contentInset = UIEdgeInsetsMake(-64, 0, 0, 0);
+    self.scrollView.showsVerticalScrollIndicator = NO;
+    self.scrollView.panGestureRecognizer.delaysTouchesBegan = YES;
+    [self.view addSubview:self.scrollView];
+    //    self.scrollView.scrollEnabled = NO;
+    self.view.backgroundColor = [UIColor lightGrayColor];
 }
 
 #pragma mark -- 配置上部按钮
 - (void)setUpTopButton
 {
     
-    NSArray *images = @[@"1_24",@"2_24",@"3_24",@"4_24",@"5_24",@"6_24",@"7_24",@"8_24"];
-    NSArray *titles = @[@"众筹",@"征信查询",@"卡片微金融",@"便捷金融",@"科学院",@"保险服务",@"理财",@"商城"];
+    NSArray *images = @[@"1_24",@"8_24",@"4_fw",@"3_24",@"5_24",@"6_24",@"7_24",@"4_24"];
+    NSArray *titles = @[@"众筹",@"商城",@"生活服务",@"卡片微金融",@"科·学院",@"保险服务",@"理财",@"便捷金融"];
     //中间的按钮
     int maxCols = 4;
     CGFloat margin = 1;
     CGFloat buttonW = (self.view.bounds.size.width - 3) / maxCols;
     CGFloat buttonH = buttonW;
     CGFloat buttonStartX = 0;
-    CGFloat buttinStartY = CGRectGetMaxY(self.infiniteScrollView.frame) + margin;
+    CGFloat buttinStartY = margin + 64;
     
     for (int i = 0; i < images.count; i++) {
         
@@ -99,10 +101,22 @@
     }
 }
 
+#pragma mark -- 配置视图
+- (void)setUpView
+{
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    NSArray *images = @[@"ad_1",@"ad_2",@"ad_1",@"ad_2",@"ad_1"];
+    CollectionImageView *infiniteScrollView = [[CollectionImageView alloc]initWithFrame:CGRectMake(0, self.btnY + 20, ScreenSize.width, 80) imageArray:images selectImageBlock:^(NSInteger index) {
+        NSLog(@"点击的是第%ld个",(long)index);
+    }];
+    [self.scrollView addSubview:infiniteScrollView];
+    self.infiniteScrollView = infiniteScrollView;
+}
+
 #pragma mark - 配置广告轮播图
 - (void)setupAdView
 {
-    UIView *adView = [[UIView alloc] initWithFrame:CGRectMake(0, self.btnY + 20, ScreenSize.width, 40)];
+    UIView *adView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.infiniteScrollView.frame) + 20, ScreenSize.width, 40)];
     adView.backgroundColor = [UIColor whiteColor];
     [self.scrollView addSubview:adView];
     UILabel *adLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 60, 20)];
@@ -236,7 +250,7 @@
 {
     if (button.tag == 0) {
         [self loadWithView:@"http://yueshouwang.com/wap"];
-    } else if (button.tag == 7) {
+    } else if (button.tag == 1) {
         [self loadWithView:@"http://abc.yueshouwang.com/mobile"];
     }
 }
