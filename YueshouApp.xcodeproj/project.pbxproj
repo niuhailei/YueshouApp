@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E4945B481D17D3A0006262D8 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E4945B471D17D3A0006262D8 /* UIImage+Extension.m */; };
 		E4B4363E1D177B5000459055 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B4363D1D177B5000459055 /* main.m */; };
 		E4B436411D177B5000459055 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B436401D177B5000459055 /* AppDelegate.m */; };
 		E4B436491D177B5000459055 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4B436481D177B5000459055 /* Assets.xcassets */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E4945B461D17D3A0006262D8 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		E4945B471D17D3A0006262D8 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		E4B436391D177B5000459055 /* YueshouApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YueshouApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B4363D1D177B5000459055 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E4B4363F1D177B5000459055 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../../AppDelegate.h; sourceTree = "<group>"; };
@@ -276,6 +279,8 @@
 		E4B4367A1D177D0400459055 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				E4945B461D17D3A0006262D8 /* UIImage+Extension.h */,
+				E4945B471D17D3A0006262D8 /* UIImage+Extension.m */,
 				E4B436A31D178B3800459055 /* UIBarButtonItem+YSExtension.h */,
 				E4B436A41D178B3800459055 /* UIBarButtonItem+YSExtension.m */,
 				E4B436A61D178B6500459055 /* UIView+Extension.h */,
@@ -536,6 +541,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4945B481D17D3A0006262D8 /* UIImage+Extension.m in Sources */,
 				E4B436A81D178B6500459055 /* UIView+Extension.m in Sources */,
 				E4B4368A1D177EC100459055 /* YSHomeViewController.m in Sources */,
 				E4B436AF1D178CFC00459055 /* CollectionImageCell.m in Sources */,

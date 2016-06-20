@@ -14,6 +14,10 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        UIImageView *backgroundView = [[UIImageView alloc] initWithFrame:self.bounds];
+//        UIImage *image = [UIImage image
+//        backgroundView.image = [UIImage
+//        self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Rectangle 1"]];
         [self setupBtnWithIcon:@"1_sys" title:@"转发"];
         [self setupBtnWithIcon:@"2_sq" title:@"评论"];
         [self setupBtnWithIcon:@"3_cz" title:@"赞"];
@@ -30,12 +34,12 @@
 {
     UIButton *btn = [[UIButton alloc] init];
     [btn setImage:[UIImage imageNamed:icon] forState:UIControlStateNormal];
-    btn.backgroundColor = YSRandomColor;
+//    btn.backgroundColor = YSRandomColor;
     UILabel *label = [[UILabel alloc] init];
     label.text = title;
-    label.backgroundColor = YSRandomColor;
+//    label.backgroundColor = YSRandomColor;
     label.font = [UIFont systemFontOfSize:16];
-
+    label.textColor = [UIColor whiteColor];
     label.textAlignment = NSTextAlignmentCenter;
     [btn addSubview:label];
     [self addSubview:btn];
@@ -59,7 +63,8 @@
         label.width = btnW;
         label.height = 30;
         label.x = 0;
-        label.y = self.height - label.height - 2 * margin - 10;
+        CGFloat labelY = btnH;
+        label.y = labelY;
         btn.width = btnW;
         btn.height = btnH;
         btn.y = btnY;

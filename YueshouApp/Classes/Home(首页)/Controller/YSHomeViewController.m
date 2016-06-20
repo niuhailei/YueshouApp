@@ -32,8 +32,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    YSBtnView *btnView = [[YSBtnView alloc] initWithFrame:CGRectMake(0, 64, self.view.width, 180)];
-    btnView.backgroundColor = YSRandomColor;
+    YSBtnView *btnView = [[YSBtnView alloc] initWithFrame:CGRectMake(0, 64, self.view.width, 150)];
+    btnView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Rectangle 1"]];
     [self.view addSubview:btnView];
     self.btnView = btnView;
     self.navigationItem.title = @"约手网";
@@ -54,7 +54,7 @@
     self.scrollView.panGestureRecognizer.delaysTouchesBegan = YES;
     [self.view addSubview:self.scrollView];
     //    self.scrollView.scrollEnabled = NO;
-    self.view.backgroundColor = [UIColor lightGrayColor];
+    self.view.backgroundColor = YSColor(242, 246, 246);
 }
 
 #pragma mark -- 配置上部按钮
@@ -131,26 +131,27 @@
     
     
     self.automaticallyAdjustsScrollViewInsets = NO;
-    NSArray *images = @[@"a1",@"a2",@"a3",@"a1",@"a2",@"a3"];
+    NSArray *images = @[@"a1",@"a2",@"a3",@"a1",@"a2",@"a3",@"a1"];
     UIScrollView *adScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(adView.frame) + 1, ScreenSize.width, 69)];
 //    adScrollView.pagingEnabled = YES;
     adScrollView.backgroundColor = [UIColor whiteColor];
     adScrollView.showsHorizontalScrollIndicator = NO;
     [self.scrollView addSubview:adScrollView];
+    CGFloat margin = 2;
     for (int i = 0; i < images.count; i++) {
         UIButton *imageBtn = [[UIButton alloc] init];
         imageBtn.tag = 200 + i;
         [imageBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@", images[i]]] forState:UIControlStateNormal];
-        imageBtn.frame = CGRectMake(2 + 122 * i, 2, 120, 65);
+        imageBtn.frame = CGRectMake(margin + (120 + margin) * i, 2, 120, 65);
         [adScrollView addSubview:imageBtn];
     }
     UIButton *tempBtn = [adScrollView viewWithTag:200];
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(2 + 122 * 6, 0, 120, 65)];
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(margin + (120 + margin) * 6, 0, 120, 65)];
     button.backgroundColor = tempBtn.backgroundColor;
     [button.imageView setImage:tempBtn.imageView.image];
     
     [adScrollView addSubview:button];
-    adScrollView.contentSize = CGSizeMake(120 * (images.count - 1), 0);
+    adScrollView.contentSize = CGSizeMake((120 + margin) * images.count, 0);
     self.adScrollView = adScrollView;
     adScrollView.tag = 100;
     //启动定时器
@@ -184,10 +185,10 @@
     //通过改变contentOffset来切换滚动视图的子界面
     float offset_X = scrollView.contentOffset.x;
     //每次切换一个屏幕
-    offset_X += 120;
+    offset_X += 120 + 2;
     
     //说明要从最右边的多余视图开始滚动了，最右边的多余视图实际上就是第一个视图。所以偏移量需要更改为第一个视图的偏移量。
-    if (offset_X > 90 * 5) {
+    if (offset_X > 122 * 3) {
         scrollView.contentOffset = CGPointMake(0, 0);
         
     }
@@ -195,7 +196,7 @@
     CGPoint resultPoint = CGPointMake(offset_X, 0);
     //切换视图时带动画效果
     //最右边的多余视图实际上就是第一个视图，现在是要从第一个视图向第二个视图偏移，所以偏移量为一个屏幕宽度
-    if (offset_X > 90 * 5) {
+    if (offset_X > 122 * 3) {
         [scrollView setContentOffset:CGPointMake(0, 0) animated:NO];
     }else{
         [scrollView setContentOffset:resultPoint animated:YES];

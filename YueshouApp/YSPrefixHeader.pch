@@ -15,6 +15,7 @@
 #import "YSNavigationController.h"
 #import "UIView+Extension.h"
 #import "UIBarButtonItem+YSExtension.h"
+#import "UIImage+Extension.h"
 
 // 颜色
 #define YSColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]

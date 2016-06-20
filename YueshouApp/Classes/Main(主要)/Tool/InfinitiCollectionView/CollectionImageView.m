@@ -144,7 +144,7 @@ static NSInteger const SectionCount = 50;
         _pageCtrl = [[UIPageControl alloc]initWithFrame:CGRectMake((SELF_WIDTH - 100) * 0.5f, SELF_HEIGHT - 20, 100, 20)];
         _pageCtrl.numberOfPages = [self.imageArray count];
         _pageCtrl.currentPage = 0;
-        _pageCtrl.currentPageIndicatorTintColor = [UIColor blueColor];
+        _pageCtrl.currentPageIndicatorTintColor = YSColor(33, 143, 254);
         _pageCtrl.pageIndicatorTintColor = [UIColor lightGrayColor];
     }
     return _pageCtrl;

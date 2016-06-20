@@ -53,7 +53,7 @@
 
 +(void)initialize
 {
-    [[UITabBar appearance] setTintColor:[UIColor blueColor]];
+    [[UITabBar appearance] setTintColor:YSColor(0, 154, 238)];
 }
 
 
